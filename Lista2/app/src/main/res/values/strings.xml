@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lista2</string>
+    <string name="title_listy">Listy zadań</string>
+    <string name="title_oceny">Oceny</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_moje_oceny">Moje Oceny</string>
+    <string name="title_moje_listy">Moje Listy Zadań</string>
+</resources>
