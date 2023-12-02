@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.annotation.MainThread
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lista2.databinding.FragmentDashboardBinding
@@ -14,6 +16,9 @@ import com.example.lista2.databinding.ListListItemBinding
 import com.example.lista2.ui.data.ExerciseList
 import com.example.lista2.createdData
 import com.example.lista2.ui.data.Results
+import androidx.navigation.fragment.findNavController
+import com.example.lista2.MainActivity
+import com.example.lista2.R
 
 class ListListAdapter(private val listList: List<ExerciseList>) : RecyclerView.Adapter<ListListViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListListViewHolder {
@@ -38,6 +43,9 @@ class ListListViewHolder(private val binding: ListListItemBinding) :
         binding.listNumber.text = "Lista: " + item.nrLis.toString()
         binding.questionAmount.text = "Liczba zadań: " + item.exercises.size.toString()
         binding.score.text = "Ocena: " + String.format("%.2f", item.grade)
+        binding.root.setOnClickListener {
+            //findNavController(, R.id.nav_host_fragment_activity_main).navigate(HomeFragmentDirections.actionHomeFragmentToNotificationsFragment())
+        }
     }
 }
 class HomeFragment : Fragment() {
