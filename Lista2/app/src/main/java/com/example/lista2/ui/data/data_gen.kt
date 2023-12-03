@@ -10,6 +10,7 @@ class Generator
     private val subjects = listOf("matematyka", "pum", "fizyka", "elektronika", "algorytmy")
     public var listOfLists = listOf<ExerciseList>()
     public var listOfResults = listOf<Results>()
+    public var klikniety = 0
     public fun refreshData(amount: Int)
     {
         val returnable = mutableListOf<ExerciseList>()
